@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-[30%] border border-black rounded-lg shadow-lg bg-white mt-5  mx-auto py-4 px-3">
+        <p class="text-3xl ml-16 font-semibold">Calculator</p>
+        <form action="" method="post" class="gap-3" >
+            {% csrf_token %}
+            <label for="">Value1</label>
+            <input type="text" name="num1" class="p-3 border w-full  border-black" placeholder="enter  first digit"><br><br>
+            <label for="">Select Operator</label>
+            <select name="opr" class="p-3 border w-full border-black">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select><br><br>
+
+            <label for="">Value2</label>
+            <input type="text" name="num2"class="p-3 border w-full border-black" placeholder="enter second digit digit"><br><br>
+            <button type="submit" class="bg-green-600 w-full p-3 text-white">Submit</button>
+        </form>
+        output:<input class="p-3 border w-full border-black" value="{{c}}">
+    </div>
+   
+</body>
+</html>

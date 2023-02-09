@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-[30%] border border-black rounded-lg shadow-lg bg-white mt-5  mx-auto  px-3">
+        <p class="text-3xl ml-16 font-semibold">Result</p>
+        <form action="" method="post" >
+            {% csrf_token %}
+            <label for="">Hindi</label>
+            <input type="number" name="hindi" class="p-2 border w-full  border-black" placeholder="enter digit"><br>
+
+            <label for="">Sanskrit</label>
+            <input type="number" name="sanskrit"class="p-2 border w-full border-black" placeholder="enter digit"><br>
+
+            <label for="">Math</label>
+            <input type="number" name="math"class="p-2 border w-full border-black" placeholder="enter digit"><br>
+
+            <label for="">Science</label>
+            <input type="number" name="science"class="p-2 border w-full border-black" placeholder="enter digit"><br>
+
+            <label for="">Social Science</label>
+            <input type="number" name="social_science"class="p-2 border w-full border-black" placeholder="enter digit"><br>
+
+            <button type="submit" class="bg-green-600 w-full mt-2 p-2 text-white">Submit</button>
+        </form>
+        Total Marks:<input class="p-2 border w-full border-black" name="total_marks" value="{{total_marks}}"><br>
+        Percentage:<input class="p-2 border w-full border-black"name="percentage" value="{{percentage}}"><br>
+        Div:<input class="p-2 border w-full mb-2 border-black"name="div" value="{{div}}"><br>
+
+    </div>
+</body>
+</html>

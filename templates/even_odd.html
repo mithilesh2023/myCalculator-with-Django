@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even_Odd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-[30%] border border-black rounded-lg shadow-lg bg-white mt-5  mx-auto py-4 px-3">
+        <p class="text-3xl ml-16 font-semibold">Calculator</p>
+        <form action="" method="post" class="gap-3" >
+            {% csrf_token %}
+            <label for="">Value1</label>
+            <input type="text" name="num1" class="p-3 border w-full  border-black" placeholder="Enter  Your Digit"><br><br>
+            <button type="submit" class="bg-green-600 w-full p-3 font-semibold text-white">Check</button>
+        </form>
+        output:<input class="p-3 border w-full border-black" value="{{c}}">
+    </div>
+</body>
+</html>
